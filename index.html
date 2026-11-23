@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Activity Management Portal</h1>
+        <p>Explore Events and Join University Activities</p>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome Students</h2>
+            <p>Discover upcoming events and participate in university activities.</p>
+        </section>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+
+            <article>
+                <h3>Technical Fest</h3>
+                <p>Join coding competitions, workshops and technical activities.</p>
+            </article>
+
+            <article>
+                <h3>Sports Meet</h3>
+                <p>Participate in sports and show your talent.</p>
+            </article>
+
+            <article>
+                <h3>Cultural Fest</h3>
+                <p>Enjoy dance, music and cultural performances.</p>
+            </article>
+
+            <aside>
+                <h3>Important Notice</h3>
+                <p>Register early to participate in your favourite events.</p>
+            </aside>
+        </section>
+
+        <section id="register">
+            <h2>Student Registration Form</h2>
+
+            <form id="registrationForm">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="year">Year of Study:</label>
+                <select id="year" name="year">
+                    <option value="">Select Year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <p>Interests:</p>
+                <input type="checkbox" id="sports" name="interest" value="Sports">
+                <label for="sports">Sports</label>
+
+                <input type="checkbox" id="technology" name="interest" value="Technology">
+                <label for="technology">Technology</label>
+
+                <label for="event">Choose Event:</label>
+                <select id="event" name="event">
+                    <option>Technical Fest</option>
+                    <option>Sports Meet</option>
+                    <option>Cultural Fest</option>
+                </select>
+
+                <label for="feedback">Comments / Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+            <p id="successMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Activity Management Portal</p>
+    </footer>
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("successMessage").textContent =
+        "Registration successful! Thank you for registering.";
+});
+</script>
+</body>
+</html>
